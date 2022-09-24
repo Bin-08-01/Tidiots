@@ -16,6 +16,9 @@ const commands = [
 	new SlashCommandBuilder().setName('schedule').setDescription('Set schedule').addStringOption(option=>
 		option.setName('name').setDescription('name schedule').setRequired(true)
 	),
+	new SlashCommandBuilder().setName('kick').setDescription('Kick user from voice channel').addUserOption(option=>
+		option.setName('user').setDescription('username you want to kick').setRequired(true)
+	)
 ]
 	.map(command => command.toJSON());
 

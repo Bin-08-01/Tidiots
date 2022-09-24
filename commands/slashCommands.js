@@ -34,6 +34,10 @@ const splashCommands = {
                     .then(kickInfo => console.log(`Kicked ${kickInfo.user?.tag ?? kickInfo.tag ?? kickInfo}`))
                     .catch(console.error);
             }
+            else if(commandName === 'kick') {
+                const user = interaction.options.getUser('user');
+                console.log(client.guilds);
+            }
         });
     }
 }
